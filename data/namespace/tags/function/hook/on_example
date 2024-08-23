@@ -1,0 +1,18 @@
+> #namespace:hook > on_example
+--------------------
+ ! when this event is triggered/called
+  @ tick | pre-tick | post-tick | advancement
+   - can gramatically assume the word "triggers" before each entry
+ ! another trigger
+--------------------
+ -> immutable_info: int
+--------------------
+ <-> mutable_passed_variable: string
+--------------------
+ - description and notes about passed inputs.
+ - immutable information such as <immutable_info> are provided under storage `namespace:hook on_example[-1].info.immutable_info` (users should NOT modify this data).
+ - mutable pass variables such as >mutable_passed_variable< would be provided under the storage data `namespace:hook on_example[-1].pass.mutable_passed_variable`
+--------------------
+# APPEND
+(this is either 'APPEND' or 'RELACE', and specifies whether 'replace' should be true or false, (is this an exclusive hook?))
+--------------------

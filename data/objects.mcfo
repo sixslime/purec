@@ -1,0 +1,36 @@
+
+MyObject {
+  my_number: int
+  my_text: string
+  my_object: obj
+  my_anything: any
+  my_array[]: MyObject
+  my_optional_number? int
+  my_nested_objects[]: {
+    field: int
+    (OtherObject)
+  }
+  my_partial_object: MyObject!
+  (ANY)
+}
+
+OtherObject {
+  other_field: string
+}
+
+#
+
+ItemSlot {
+  Slot: byte
+  (Item)
+}
+
+Item {
+  id: string
+  count: int
+  components: ItemComponents
+}
+
+ItemComponents {
+  ...
+}
