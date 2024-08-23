@@ -6,9 +6,6 @@
 # load
 scoreboard players set *purec load-status 1
 
-# settings
-execute unless data storage purec:settings {PERSIST:true} run function purec:settings
-
 #declare storage purec:var
 #declare storage purec:in
 #declare storage purec:out
