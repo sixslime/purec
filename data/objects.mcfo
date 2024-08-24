@@ -1,1 +1,19 @@
 
+purec:data {
+  function: {
+    <PurecIdentifier...>: $command
+  }
+  this: {
+    input: obj
+    result: any
+  }
+  cache: {
+  <PurecIdentifier...>: {
+      '<object>': {
+        result: any
+        return: int
+        _: bool = true
+      }
+    }
+  }
+}

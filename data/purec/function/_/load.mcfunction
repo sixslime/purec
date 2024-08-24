@@ -17,7 +17,3 @@ scoreboard players set *purec load-status 1
 scoreboard objectives add -purec dummy
 scoreboard objectives add --purec dummy
 #scoreboard objectives add purec-scoreboard dummy
-
-# tick
-schedule clear purec:_/tick
-function purec:_/tick
