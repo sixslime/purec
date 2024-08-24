@@ -3,7 +3,7 @@ purec:data {
   pfunction: {
     <PurecIdentifier...>: $command
   }
-  this: {
+  this[]: {
     input: obj
     result: any
   }
