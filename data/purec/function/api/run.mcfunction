@@ -17,6 +17,7 @@
 
 execute unless data storage purec:in run.input run data modify storage purec:in run.input set value {}
 
+data remove storage purec:out run
 scoreboard players set *run.return --purec 1
 execute store result score *run.check -purec run function purec:_/impl/run/check with storage purec:in run
 execute unless score *run.check -purec matches 1 run function purec:_/impl/run/run with storage purec:in run
