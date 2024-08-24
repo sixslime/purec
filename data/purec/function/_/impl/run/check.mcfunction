@@ -3,7 +3,7 @@
 # @api
 #--------------------
 
-$data modify storage purec:var run.entry set from storage purec:data cache.'$(function)'.'$(input)'
+$data modify storage purec:var run.entry set from storage purec:data cache.'$(pfunction)'.'$(input)'
 execute unless data storage purec:var run.entry{_:true} run return 0
 
 execute store result score *run.return --purec run data get storage purec:var run.entry.return

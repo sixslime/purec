@@ -1,18 +1,18 @@
 #> purec:api > run
 #--------------------
-# -> function: PurecIdentifier
+# -> pfunction: PurecIdentifier
 # => input: obj = {}
 #--------------------
 # <- result: obj
 #--------------------
-#> attemps to get the cached result associated with the <function> and <input>;
-#> if it does not exist, generate it by actually running the command associated with <function>.
+#> attemps to get the cached result associated with the <pfunction> and <input>;
+#> if it does not exist, generate it by actually running the command associated with <pfunction>.
 #--------------------
-#- >result< is cached in {purec:data -> cache.<function>.'<input>'.result} and the return value is cached in {purec:data -> cache.<function>.'<input>'.return}
+#- >result< is cached in {purec:data -> cache.<pfunction>.'<input>'.result} and the return value is cached in {purec:data -> cache.<pfunction>.'<input>'.return}
 #--------------------
 # 1 - success
-# -1 - there is no entry for <function> in the {purec:data -> function} object
-# -2 - <function> returned a failure for the given <input>
+# -1 - there is no entry for <pfunction> in the {purec:data -> pfunction} object
+# -2 - <pfunction> returned a failure for the given <input>
 #--------------------
 
 execute unless data storage purec:in run.input run data modify storage purec:in run.input set value {}

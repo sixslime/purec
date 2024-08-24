@@ -1,6 +1,6 @@
 
 purec:data {
-  function: {
+  pfunction: {
     <PurecIdentifier...>: $command
   }
   this: {
