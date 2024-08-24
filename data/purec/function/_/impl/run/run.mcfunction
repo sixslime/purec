@@ -17,4 +17,6 @@ data remove storage purec:data this[-1]
 data merge storage purec:var {run:{out:{_:true}}}
 $data modify storage purec:data cache.'$(function)'.'$(input)' set from storage purec:var run.out
 
+data modify storage purec:out run.result set from storage purec:var run.out.result
+
 execute store result score *run.return --purec run data get storage purec:var run.out.return
