@@ -21,6 +21,8 @@ data remove storage purec:out run
 scoreboard players set *run.return --purec 1
 execute store result score *run.check -purec run function purec:_/impl/run/check with storage purec:in run
 execute unless score *run.check -purec matches 1 run function purec:_/impl/run/run with storage purec:in run
+
+# volitile reading, only works because of how the control flow works out, and how this check is explicitly for 0 and not NOT 1..
 execute if score *run.exists -purec matches 0 run scoreboard players set *run.return --purec -1
 
 data remove storage purec:in run
