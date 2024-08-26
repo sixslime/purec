@@ -3,7 +3,8 @@
 # @api
 #--------------------
 
-$execute store result score *run.exists -purec run data modify storage purec:var run.pfunction.command set from storage purec:data function.'$(pfunction)'
+$execute store result score *run.exists -purec run data modify storage purec:var run.pfunction.command set from storage purec:data pfunction.'$(pfunction)'
+
 execute unless score *run.exists -purec matches 1.. run return fail
 
 data modify storage purec:data this append value {input:{},result:{}}
