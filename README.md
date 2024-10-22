@@ -19,8 +19,8 @@ Any dependent datapack must be using the [load](https://github.com/sixslime/load
 
 ### Defining Pure Functions
 #### Function Identifier
-To create a pure function, first come up with it's PFunctionIdentifier (it's "name"). \
-A PFunctionIdentifier must be in a similar format to NBT storage locations: `<namespace>:<arbitrary path>`. (ex: `mypack:some_category/my_function`) \
+A pure function's name is refferred to as it's PFunctionIdentifier. \
+A PFunctionIdentifier must be in a format similar to NBT storage locations: `<namespace>:<arbitrary path>`. (ex: `mypack:some_category/my_function`) \
 By convention, `<namespace>` must be the namespace that the pure function is being defined in. 
 
 #### Function Definition
