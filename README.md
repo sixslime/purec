@@ -96,7 +96,7 @@ execute store result storage purec:data this[-1].output.result int 1 run scorebo
 ```
 *Obviously adding two numbers is not an expensive operation, the overhead of Pure Cache actually outweighs the execution cost of the function body, but for demonstration purposes, pretend it is an expensive operation that we want to avoid.*
 
-**Calling a pure function:**
+**Call a pure function:**
 ```mcfunction
 data merge storage purec:in {run:{pfunction:"mypack:add", input:{num_a:10, num_b:15}}}
 function purec:api/run
