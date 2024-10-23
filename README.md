@@ -29,7 +29,7 @@ To define a pure function, add an entry under the path `pfunction.<PFunctionIden
 
 It is standard to define pure functions in or in a sub-function of your datapack's load function.
 
-*Because PFunctionIdentifiers contain a ":", the NBT key needs to be quoted (ex: `pfunction.'mypack:my_function'`).*
+*Because PFunctionIdentifiers contain a ":", the NBT key needs to be quoted (ex: `pfunction."mypack:my_function"`).*
 
 #### Function Body
 When a pure function is called (with un-cached inputs) it first sets `this[-1].input` in storage `purec:data` to the input given to the function (`run.input` when calling `purec:api/run`), then it executes it's body.
