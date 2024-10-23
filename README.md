@@ -69,7 +69,7 @@ It is recommended that a datapack remove all of it's pure function definitions a
 ## Examples
 **Define a pure function that adds two numbers:**
 
-`mypack:_/load.mcfunction`:
+`mypack:load`:
 ```mcfunction
 #<...>
 # define 'add'
@@ -79,7 +79,7 @@ data remove storage purec:data cache.'mypack:add'
 #<...>
 ```
 
-`mypack:_/pure/add_body.mcfunction`:
+`mypack:_/pure/add_body`:
 ```mcfunction
 # this function is intended to take 2 inputs, 'num_a' and 'num_b'.
 # get inputs from purec:data 'this[-1].input'
