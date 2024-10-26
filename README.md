@@ -67,7 +67,7 @@ Pure Cache does not automatically remove definitions or clear it's cache. \
 It is recommended that a datapack remove all of it's pure function definitions and cache in an "uninstall" function.
 
 # Example
-Defines `mypack:add`, which takes two numbers as input, `num_a` and `num_b`, adds them, and outputs to `result`:
+Defines `mypack:add`, which takes two input numbers, `num_a` and `num_b`, adds them, and provides the result under `result`:
 ```mcfunction
 #(load function)
 data modify storage purec:data pfunction.'mypack:add' set value "function mypack:_/pure/add_body"
@@ -75,16 +75,14 @@ data modify storage purec:data pfunction.'mypack:add' set value "function mypack
 
 `data/mypack/function/_/pure/add_body.mcfunction`:
 ```mcfunction
-# this function is intended to take 2 inputs, 'num_a' and 'num_b'.
-# get inputs from purec:data 'this[-1].input'
+# get inputs from purec:data 'this[-1].input':
 execute store result score *add.result -mypack run data get storage purec:data this[-1].input.num_a
 execute store result score *add.b -mypack run data get storage purec:data this[-1].input.num_b
 
-#add numbers
+# add numbers
 scoreboard players operation *add.result -mypack += *add.b -mypack
 
-# this function has 1 output, 'result'.
-# set the output of this function via 'this[-1].output'.
+# set the output of this function via 'this[-1].output':
 execute store result storage purec:data this[-1].output.result int 1 run scoreboard players get *add.result -mypack
 #<...>
 ```
