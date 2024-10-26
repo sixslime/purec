@@ -75,14 +75,14 @@ data modify storage purec:data pfunction.'mypack:add' set value "function mypack
 
 `data/mypack/function/_/pure/add_body.mcfunction`:
 ```mcfunction
-# get inputs from purec:data 'this[-1].input':
+# get inputs from purec:data -> 'this[-1].input':
 execute store result score *add.result -mypack run data get storage purec:data this[-1].input.num_a
 execute store result score *add.b -mypack run data get storage purec:data this[-1].input.num_b
 
 # add numbers
 scoreboard players operation *add.result -mypack += *add.b -mypack
 
-# set the output of this function via 'this[-1].output':
+# set output via purec:data -> 'this[-1].input':
 execute store result storage purec:data this[-1].output.result int 1 run scoreboard players get *add.result -mypack
 #<...>
 ```
