@@ -87,7 +87,7 @@ execute store result storage purec:data this[-1].output.result int 1 run scorebo
 #<...>
 ```
 
-The pure function can then be called like so:
+`mypack:add` can be called like so:
 ```mcfunction
 data merge storage purec:in {run:{pfunction:"mypack:add", input:{num_a:10, num_b:15}}}
 function purec:api/run
