@@ -82,7 +82,7 @@ execute store result score *add.b -mypack run data get storage purec:data this[-
 # add numbers
 scoreboard players operation *add.result -mypack += *add.b -mypack
 
-# set output via purec:data -> 'this[-1].input':
+# set output via purec:data -> 'this[-1].output':
 execute store result storage purec:data this[-1].output.result int 1 run scoreboard players get *add.result -mypack
 #<...>
 ```
